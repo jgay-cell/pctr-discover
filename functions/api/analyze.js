@@ -169,7 +169,7 @@ async function callClaude(title, apiKey) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 600,
+      max_completion_tokens: 600,
       temperature: 0,
       messages: [
         { role: "user", content: `${ANALYSIS_PROMPT}\n\nTITLE: "${title}"` },
@@ -196,7 +196,7 @@ async function callOpenAI(title, apiKey) {
     body: JSON.stringify({
       model: FALLBACK_MODEL,
       temperature: 0,
-      max_tokens: 600,
+      max_completion_tokens: 600,
       messages: [
         { role: "user", content: `${ANALYSIS_PROMPT}\n\nTITLE: "${title}"` },
       ],
